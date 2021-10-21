@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1179512617684283240}
   - component: {fileID: 426768319}
   - component: {fileID: 426768318}
+  - component: {fileID: 784774870}
   m_Layer: 0
   m_Name: "da\u015FObs"
   m_TagString: Untagged
@@ -111,3 +112,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bbb967078c5954a9dd87b39aa221e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 0
+--- !u!135 &784774870
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560563951299780752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5687408
+  m_Center: {x: 0.02149564, y: 0.063506715, z: -0.043936666}

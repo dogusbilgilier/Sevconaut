@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OxygenManager : MonoBehaviour
 {
+    public static bool isDead;
     public Image oxygenBar;
     public float drowningSpeed;
     float fillValue;
@@ -15,20 +16,25 @@ public class OxygenManager : MonoBehaviour
     }
     private void Start()
     {
+        isDead = false;
         player = Player.inst;
         fillValue = player.oxygen / 100f;
     }
     public void Drowning()
     {
-
-        player.oxygen -= drowningSpeed * Time.deltaTime; ;
-        fillValue = player.oxygen / 100f;
-        oxygenBar.fillAmount = Mathf.Lerp(oxygenBar.fillAmount, fillValue, 0.05f);
-
-        if (player.oxygen <= 0)
+        if (!isDead)
         {
-            Debug.Log("Dead");
+            player.oxygen -= drowningSpeed * Time.deltaTime; ;
+            fillValue = player.oxygen / 100f;
+            oxygenBar.fillAmount = Mathf.Lerp(oxygenBar.fillAmount, fillValue, 0.05f);
+
+            if (player.oxygen <= 0)
+            {
+                Debug.Log("Dead");
+                isDead = true;
+            }
         }
+        
 
     }
 

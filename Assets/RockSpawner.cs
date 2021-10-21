@@ -18,7 +18,6 @@ public class RockSpawner : MonoBehaviour
     {
 
         GameObject obstacle= Instantiate(prefabs[Random.Range(0,5)]);
-        obstacle.transform.position = new Vector3(Random.Range(-0.7f, .7f), Random.Range(0.6f, 1f), 60);
         randomTime = Random.Range(minRandomTime, maxRandomTime);
     }
 }
