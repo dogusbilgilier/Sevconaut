@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public float oxygen = 100;
     public static Player inst;
-    OxygenManager oxygenManager;
+    OxygenManager oxygenManager; IHitable h;
     private void Awake()
     {
         oxygen = 100;
@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
             Debug.Log("Tube");
             oxygenManager.OxygenTaken();
             Destroy(other.gameObject);
+        }
+        if (other.CompareTag("obstacle"))
+        {
+            
+          
         }
     }
 
