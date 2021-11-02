@@ -26,4 +26,9 @@ public class CameraFollow : MonoBehaviour
         }
 
     }
+
+    void WhenUfoComes()
+    {
+
+    }
 }

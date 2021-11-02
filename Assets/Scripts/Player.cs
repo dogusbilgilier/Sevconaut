@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     public float oxygen = 100;
     public static Player inst;
-    OxygenManager oxygenManager; IHitable h;
+    OxygenManager oxygenManager;
+    
     private void Awake()
     {
         oxygen = 100;
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
         }
         if (other.CompareTag("obstacle"))
         {
-            
+            oxygenManager.DamagedByObs();
           
         }
     }

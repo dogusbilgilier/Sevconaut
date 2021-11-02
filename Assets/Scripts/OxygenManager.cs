@@ -38,6 +38,11 @@ public class OxygenManager : MonoBehaviour
 
     }
 
+    public void DamagedByObs()
+    {
+        player.oxygen -= 10;
+    }
+
     public void OxygenTaken()
     {
         player.oxygen += 20f;
