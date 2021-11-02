@@ -32,6 +32,8 @@ public class OxygenManager : MonoBehaviour
             {
                 Debug.Log("Dead");
                 isDead = true;
+
+                Dead();
             }
         }
         
@@ -43,14 +45,19 @@ public class OxygenManager : MonoBehaviour
         player.oxygen -= 10;
     }
 
-    public void OxygenTaken()
+    public void OxygenTaken(float oxygen)
     {
-        player.oxygen += 20f;
+        player.oxygen += oxygen;
         player.oxygen = Mathf.Clamp(player.oxygen, 0, 100);
     }
 
     private void Update()
     {
         Drowning();
+    }
+
+    void Dead()
+    {
+        player.Dead();
     }
 }
