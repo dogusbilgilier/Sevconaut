@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7cf1f8a232f4d42b844615a8943c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygen: 0
+  oxygen: 25
 --- !u!1 &6612966820757448873
 GameObject:
   m_ObjectHideFlags: 0

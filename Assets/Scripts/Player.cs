@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         }
         if (other.CompareTag("obstacle"))
         {
-            oxygenManager.DamagedByObs();
+            //oxygenManager.DamagedByObs();
         }
         else if (other.CompareTag("fin"))
         {

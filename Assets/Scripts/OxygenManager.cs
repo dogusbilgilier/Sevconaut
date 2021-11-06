@@ -24,9 +24,9 @@ public class OxygenManager : MonoBehaviour
     {
         if (!isDead)
         {
-            player.oxygen -= drowningSpeed * Time.deltaTime; ;
-            fillValue = player.oxygen / 100f;
-            oxygenBar.fillAmount = Mathf.Lerp(oxygenBar.fillAmount, fillValue, 0.05f);
+           /// player.oxygen -= drowningSpeed * Time.deltaTime; ;
+            //fillValue = player.oxygen / 100f;
+            //oxygenBar.fillAmount = Mathf.Lerp(oxygenBar.fillAmount, fillValue, 0.05f);
 
             if (player.oxygen <= 0)
             {
@@ -36,12 +36,15 @@ public class OxygenManager : MonoBehaviour
                 Dead();
             }
         }
-        
+        player.oxygen -= drowningSpeed * Time.deltaTime; ;
+        fillValue = player.oxygen / 100f;
+        oxygenBar.fillAmount = Mathf.Lerp(oxygenBar.fillAmount, fillValue, 0.05f);
 
     }
 
     public void DamagedByObs()
     {
+        Debug.Log("Damaged by obs");
         player.oxygen -= 10;
     }
 
