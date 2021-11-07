@@ -11,7 +11,8 @@ public class RockSpawner : MonoBehaviour
     {
 
         randomTime = Random.Range(minRandomTime, maxRandomTime);
-        InvokeRepeating("InstantiateRock", randomTime, randomTime);
+        if (!Player.fin)
+            InvokeRepeating("InstantiateRock", randomTime, randomTime);
     }
 
     void InstantiateRock()

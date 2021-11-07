@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
+    public static bool fin;
     public float oxygen = 100;
     public static Player inst;
     OxygenManager oxygenManager;
@@ -36,7 +37,11 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("fin"))
         {
+           
+            GetComponent<CharMovement>().enabled = false;
+            fin = true;
             Win();
+            SpaceShip.inst.Land();
         }
     }
 
